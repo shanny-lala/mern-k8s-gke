@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+  namespace: mern-app
+  labels:
+    app.kubernetes.io/name: backend
+    app.kubernetes.io/component: api
+spec:
+  selector:
+    app: backend
+  ports:
+    - port: 5000
+      targetPort: 5000
+      name: http
+      # nodePort: 30500  # Décommenter pour accès direct Minikube
+  # type: ClusterIP      # Pour production GKE (accès via Ingress)
+  type: NodePort         # Pour tests locaux Minikube
