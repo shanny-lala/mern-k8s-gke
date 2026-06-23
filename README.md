@@ -1,5 +1,6 @@
 # MERN K8s — Application MERN sur Kubernetes avec HPA
 
+![Miniature](capture%20gcp/miniature.png)
 Application web MERN (MongoDB, Express, React, Node.js) conteneurisee avec Docker
 et orchestree par Kubernetes avec Horizontal Pod Autoscaler (HPA).
 Deploiement sur cluster local (Minikube) et Google Cloud Platform (GKE).
@@ -261,3 +262,23 @@ GCP/
 | Autoscaling   | HPA v2 (CPU + Memoire) |
 | Cloud         | Google Cloud Platform  |
 | Benchmark     | Apache Benchmark (ab)  |
+
+## Captures d'écran
+
+### Déploiement et Autoscaling
+![Déploiement Automatisé](capture%20gcp/Le%20Déploiement%20Automatisé%20avec%20script%20d'automatisation,%20Vérification%20de%20la%20santé%20de%20l'API%20.png)
+![Autoscaling HPA](capture%20gcp/Le%20Clou%20:%20L'Autoscaling%20HPA,%20Terminal%201%20—%20Monitoring%20en%20temps%20réel,%20Terminal%202%20—%20Test%20de%20charge%20Apache%20Benchmark.png)
+
+### Dashboard
+![Dashboard 1](capture%20gcp/dashboard%20capture%201.png)
+![Dashboard 2](capture%20gcp/dashboard%20capture%202.png)
+
+### Gestion des tâches
+![Tâches 1](capture%20gcp/tâches%20capture%201.png)
+![Tâches 2](capture%20gcp/tâches%20capture%202.png)
+![Formulaire création](capture%20gcp/formulaire%20création%20d'%20une%20nouvelle%20tâche.png)
+
+### À propos
+![À propos 1](capture%20gcp/à%20propos%20capture%201.png)
+![À propos 2](capture%20gcp/à%20propos%20capture%202.png)
+![À propos 3](capture%20gcp/à%20propos%20capture%203.png)
