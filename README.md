@@ -1,7 +1,7 @@
 # MERN K8s — Application MERN sur Kubernetes avec HPA
 
-![Miniature](capture%20gcp/miniature.png)
-Application web MERN (MongoDB, Express, React, Node.js) conteneurisee avec Docker
+![Miniature](assets/images/miniature.png)
+Application web MERN (MongoDB, Express, React, Node.js) conteneurisée avec Docker
 et orchestree par Kubernetes avec Horizontal Pod Autoscaler (HPA).
 Deploiement sur cluster local (Minikube) et Google Cloud Platform (GKE).
 
@@ -263,22 +263,38 @@ GCP/
 | Cloud         | Google Cloud Platform  |
 | Benchmark     | Apache Benchmark (ab)  |
 
+## Fonctionnalités Principales
+
+### 1. Gestion Complète des Tâches (CRUD)
+- **Création & Édition** : Formulaire intuitif pour l'ajout et la modification avec gestion de la priorité (Basse, Moyenne, Haute) et du statut.
+- **Liste Pagée et Filtrée** : Interface optimisée permettant de naviguer facilement dans de grandes quantités de tâches grâce à une pagination côté serveur.
+- **Statistiques en Temps Réel** : Visualisation instantanée de l'avancement via le Dashboard (taux de complétion, répartition par priorité).
+
+### 2. Architecture Cloud-Native & Haute Disponibilité
+- **Conteneurisation Multi-Stage** : Images Docker ultra-légères pour le Frontend (Nginx) et le Backend (Node.js).
+- **Autoscaling HPA** : Mise à l'échelle dynamique sur Kubernetes (de 2 à 10 Pods) en fonction de l'utilisation CPU/Mémoire pour absorber les pics de charge.
+- **Sondes de Santé (Probes)** : Liveness et Readiness probes configurées pour garantir qu'aucun trafic n'est envoyé vers un Pod défectueux.
+
+### 3. Automatisation et Tests de Charge
+- **Scripts de Déploiement** : Un script unifié pour lancer le cluster Minikube, builder les images et appliquer les manifests.
+- **Stress-Testing Intégré** : Utilisation d'Apache Benchmark pour simuler des dizaines de milliers de requêtes et valider la réactivité du HPA.
+
 ## Captures d'écran
 
 ### Déploiement et Autoscaling
-![Déploiement Automatisé](capture%20gcp/Le%20Déploiement%20Automatisé%20avec%20script%20d'automatisation,%20Vérification%20de%20la%20santé%20de%20l'API%20.png)
-![Autoscaling HPA](capture%20gcp/Le%20Clou%20:%20L'Autoscaling%20HPA,%20Terminal%201%20—%20Monitoring%20en%20temps%20réel,%20Terminal%202%20—%20Test%20de%20charge%20Apache%20Benchmark.png)
+![Déploiement Automatisé](assets/images/automated-deployment.png)
+![Autoscaling HPA](assets/images/hpa-autoscaling.png)
 
 ### Dashboard
-![Dashboard 1](capture%20gcp/dashboard%20capture%201.png)
-![Dashboard 2](capture%20gcp/dashboard%20capture%202.png)
+![Dashboard 1](assets/images/dashboard-1.png)
+![Dashboard 2](assets/images/dashboard-2.png)
 
 ### Gestion des tâches
-![Tâches 1](capture%20gcp/tâches%20capture%201.png)
-![Tâches 2](capture%20gcp/tâches%20capture%202.png)
-![Formulaire création](capture%20gcp/formulaire%20création%20d'%20une%20nouvelle%20tâche.png)
+![Tâches 1](assets/images/tasks-1.png)
+![Tâches 2](assets/images/tasks-2.png)
+![Formulaire création](assets/images/task-creation-form.png)
 
 ### À propos
-![À propos 1](capture%20gcp/à%20propos%20capture%201.png)
-![À propos 2](capture%20gcp/à%20propos%20capture%202.png)
-![À propos 3](capture%20gcp/à%20propos%20capture%203.png)
+![À propos 1](assets/images/about-1.png)
+![À propos 2](assets/images/about-2.png)
+![À propos 3](assets/images/about-3.png)
